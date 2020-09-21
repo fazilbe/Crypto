@@ -78,6 +78,13 @@ const cryptoPage = {
 		...Setting.fontWeight400,
 		fontSize: Setting.h2TextSize,
 		textAlign: "right"
+	},
+	trackLabel: {
+		color: Colors.white,
+		...Setting.fontWeight400,
+		fontSize: Setting.nTextSize,
+		textAlign: "center",
+		marginBottom: 20
 	}
 }
 /* CRYPTO PAGE - ENDS */

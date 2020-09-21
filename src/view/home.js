@@ -88,7 +88,7 @@ export const HomeScreen = ({ navigation }) => {
               <Text style={[styles.cryptoCost]}>$ {currentBTC.rate}</Text>
             </View>
           </View>
-
+          <Text style={[styles.trackLabel]}>Last 30 days</Text>
 		      <ScrollView horizontal={true}>
           <Chart chartData = {state}/>
           </ScrollView>

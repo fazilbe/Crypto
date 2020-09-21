@@ -31,6 +31,8 @@ export const Chart = (props) => {
 		// SETTING INSIDE THE STATE
 		setLabel(labelList);
 		setValue(valueList);
+		console.log("labelList: " + labelList);
+		console.log("valueList: " + valueList);
 	}, [])
 	return (
 		<>
@@ -43,7 +45,7 @@ export const Chart = (props) => {
 					}
 				]
 				}}
-				width={ value.length < 3 ? Dimensions.get("window").width : value.length * 100} // from react-native
+				width={ value.length < 3 ? Dimensions.get("window").width : (value.length - 1) * 100} // from react-native
 				height={220}
 				yAxisLabel="$"
 				yAxisInterval={1} // optional, defaults to 1

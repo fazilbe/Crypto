@@ -14,3 +14,7 @@
 # Note
 1. Screenshot attached of the app.
 
+# future feature
+1. Can you different like last 1, 7, 30 or 60 days.
+2. Can add light or dark theme.
+3. User input like managing add / remove .

@@ -4,7 +4,7 @@
 * Declare all color variable
 *
 * @author - Ahamed
-* @date   - 26 August 2020
+* @date   - 20 September 2020
 ***/
 'use strict';
 export const Colors = {

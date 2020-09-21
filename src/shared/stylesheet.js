@@ -4,7 +4,7 @@
 * Declare all style details.
 *
 * @author - Ahamed
-* @date   - 26 August 2020
+* @date   - 20 September 2020
 *
 ***/
 // REACT NATIVE IMPORT
@@ -23,8 +23,6 @@ const layoutStyle ={
 	safeViewContainer: {
     	flex: 1,
     	backgroundColor: '#191e23',
-		justifyContent: 'flex-start',
-	    alignItems: 'flex-start',
 	},
 	body: {
 		flex: 1,
@@ -41,8 +39,6 @@ const layoutStyle ={
     	borderBottomRightRadius: 20,
  		borderBottomLeftRadius: 20,
  		overflow: 'hidden',
-		justifyContent: 'flex-start',
-	    alignItems: 'flex-start',
 	},
 	headerContainer: {
 	    height: RFValue(55),
@@ -144,15 +140,10 @@ const imagesStyle = {
 	}
 }
 /* IMAGES - ENDS */
-/* SPECIAL ICONS - STARTS */
-const specialIconStyle = {
-}
-/* SPECIAL ICONS - ENDS */
 export const styles = StyleSheet.create({
 	...layoutStyle,
 	...alignStyle,
 	...imagesStyle,
 	...cryptoPage,
-	...specialIconStyle,
 	...flexStyle
 });

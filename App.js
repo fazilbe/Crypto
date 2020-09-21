@@ -15,10 +15,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import SplashScreen from 'react-native-splash-screen';
 
 // ALL SHARED FILES
-import * as Utils from './src/shared/utils';
 import * as Constant from './src/shared/constant';
-import { styles } from './src/shared/stylesheet';
-import { Colors } from './src/shared/colors';
 
 // ALL NAVIGATION
 import { HomeScreen } from './src/view/home';

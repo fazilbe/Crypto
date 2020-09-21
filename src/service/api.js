@@ -4,7 +4,7 @@
 * Handle API Service
 *
 * @author - Faizal
-* @date   - 24 April 2020
+* @date   - 20 September 2020
 *
 ***/
 // REACT NATIVE IMPORT

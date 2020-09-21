@@ -3,7 +3,7 @@
 * SETTING.js
 * Declare all main setting variable declare
 * @author - Ahamed
-* @date   - 26 August 2020
+* @date   - 20 September 2020
 *
 ***/
 // REACT NATIVE IMPORT

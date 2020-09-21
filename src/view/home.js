@@ -14,17 +14,11 @@ import { Button, Icon } from 'react-native-elements';
 import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 
 // ALL SHARED FILES
-import Images from '../../assets/index';
 import * as Utils from '../shared/utils';
 import * as Constant from '../shared/constant';
 import { styles } from '../shared/stylesheet';
-import * as Sound from '../shared/sound';
-import { Colors } from '../shared/colors';
 import * as API from '../service/api';
 import { Chart } from '../component/complex/chart';
-
-// ICONS
-import BitcoinIcon from '../../assets/img/bitcoin.png';
 
 // ALL PAGE FILES
 //import { MHeader  } from '../layout/header';
@@ -38,20 +32,6 @@ export const HomeScreen = ({ navigation }) => {
     getCurrentBTC();
     getBTCHistory(30);
   }, [])
-
-
-  /**
-  * START GAME WHEN USER CLICKED THE START BUTTON
-  *
-  * @input  NA
-  * @return NA
-  */
-  const startGame = () => {
-    // PLAY CLICK SOUND
-    Sound.playAudio(Constant.GENERIC.CLICK_AUDIO);
-    // NAVIGATING TO PLAY GAME SCREEN
-    navigation.navigate("Track");
-  }
 
   /**
   * GET CURRENT BTC
@@ -99,7 +79,7 @@ export const HomeScreen = ({ navigation }) => {
   return (
     <>
       <SafeAreaView style={[styles.safeViewContainer]}>
-        <View style={[styles.body, styles.p0, styles.pt5]}>
+        <ScrollView style={[styles.body, styles.p0, styles.pt5]}>
           <View style={[styles.row, styles.cryptoRow]}>
             <View style={[styles.flex1]}>
               <Text style={[styles.cryptoLabel]}>BTC</Text>
@@ -109,8 +89,10 @@ export const HomeScreen = ({ navigation }) => {
             </View>
           </View>
 
+		      <ScrollView horizontal={true}>
           <Chart chartData = {state}/>
-        </View>
+          </ScrollView>
+        </ScrollView>
       </SafeAreaView>
     </>
   );

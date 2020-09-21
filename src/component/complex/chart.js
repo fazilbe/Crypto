@@ -1,31 +1,25 @@
 /**
 *
-* card.js
-* Card component
+* CHART.js
+* Chart component
 *
 * @author - Ahamed
-* @date   - 26 August 2020
+* @date   - 20 September 2020
 *
 ***/
 // REACT NATIVE IMPORT
 import React, {useState, useEffect} from 'react';
 import { SafeAreaView, View, Text, StatusBar, ScrollView, Dimensions} from 'react-native';
-import { Icon } from 'react-native-elements';
-import { RFPercentage, RFValue } from "react-native-responsive-fontsize";
 import {LineChart} from "react-native-chart-kit";
 
-// ALL SHARED FILES
-import * as Utils from '../../shared/utils';
-import * as Constant from '../../shared/constant';
-import { styles } from '../../shared/stylesheet';
-import * as Sound from '../../shared/sound';
-import { Colors } from '../../shared/colors';
-
 export const Chart = (props) => {
+
+	// STATE VARIABLE DECLARE
 	const [label, setLabel] = useState(["None"]);
 	const [value, setValue] = useState([5]);
 	
 	useEffect(() => {
+		// GENERATING LABLE AND VALUE DATA LIST
 		let labelList = [];
 		let valueList = [];
 		for (var key in props.chartData) {
@@ -34,11 +28,12 @@ export const Chart = (props) => {
 				valueList.push(props.chartData[key]);
 			}
 		}
+		// SETTING INSIDE THE STATE
 		setLabel(labelList);
 		setValue(valueList);
 	}, [])
 	return (
-		
+		<>
 			<LineChart
 				data={{
 				labels: [...label],
@@ -48,7 +43,7 @@ export const Chart = (props) => {
 					}
 				]
 				}}
-				width={1000} // from react-native
+				width={ value.length < 3 ? Dimensions.get("window").width : value.length * 100} // from react-native
 				height={220}
 				yAxisLabel="$"
 				yAxisInterval={1} // optional, defaults to 1
@@ -69,5 +64,6 @@ export const Chart = (props) => {
 				}}
 				bezier
 			/>
+		</>
 	)
 }
